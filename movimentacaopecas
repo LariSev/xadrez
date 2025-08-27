@@ -1,27 +1,41 @@
-// Movimentação peças de xadrez (Nível Novato)
-Aluna: Larissa Severo de Faria
+// Movimentação de peças de xadrez (Nível Aventureiro)
+// Aluna: Larissa Severo de Faria
 
 #include <stdio.h>
 
 int main() {
-    // Mover a Torre 5 casas para a direita
+    // --- Movimento da Torre: 5 casas para a direita ---
     for (int a = 0; a < 5; a++) {
         printf("Direita\n"); // Imprime a direção do movimento
     }
 
-    // Mover o Bispo 5 casas na diagonal
+    // --- Movimento do Bispo: 5 casas na diagonal ---
     int b = 0;
     while (b < 5) {
         printf("Cima, Direita\n"); // Imprime a direção do movimento
-        b++; // Incrementa o contador para evitar loop infinito
+        b++; // Incrementa o contador
     }
 
-    // Mover a Rainha 8 casas para a esquerda
+    // --- Movimento da Rainha: 8 casas para a esquerda ---
     int c = 0;
     do {
         printf("Esquerda\n"); // Imprime a direção do movimento
-        c++; // Incrementa o contador para evitar loop infinito
+        c++; // Incrementa o contador
     } while (c < 8);
+
+    // --- Movimento do Cavalo: 2 casas para baixo e 1 para a esquerda ---
+    // Loops aninhados para simular o "L"
+    printf("\n--- Movimento do Cavalo ---\n");
+    int movimentoCompleto = 1; 
+    
+    // O loop while executa apenas uma vez
+    while (movimentoCompleto--) { 
+        // O loop for é executado duas vezes para simular o movimento de duas casas para baixo
+        for (int d = 0; d < 2; d++) {
+            printf("Baixo\n"); 
+        }
+        printf("Esquerda\n"); // Imprime a última casa do "L"
+    }
 
     return 0;
 }
